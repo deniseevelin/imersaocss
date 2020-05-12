@@ -1,0 +1,40 @@
+body {
+    background-image: url('https://www.xmple.com/wallpaper/purple-linear-white-gradient-3840x2160-c2-ee82ee-ffffff-a-255-f-14.svg');
+    background-size: auto 100vh;
+    font-family: Garamond;
+    height: 100vh /*garante q altura do body seja sempre a mesma*/
+  }
+  
+  .menu {
+    background-color: #fcd6a8
+   }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    font-family: Times;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+   }
+  
+  .site-title {
+    text-align: center;
+    color: black;
+    font-family: garamond;
+  }
+  
+  .site-subtitle {
+    text-align: center;
+    
+  }
