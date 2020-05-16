@@ -6,7 +6,7 @@
   }
 
 body {
-    background-image: url('https://www.xmple.com/wallpaper/blue-purple-gradient-linear-1920x1080-c2-48d1cc-ba55d3-a-45-f-14.svg');
+    background-image: url('https://storage.needpix.com/rsynced_images/background-1267303_1280.jpg');
     background-size: auto 100vh;
     font-family: 'Oswald', sans-serif;
     height: 100vh /*garante q altura do body seja sempre a mesma*/
@@ -33,10 +33,11 @@ body {
   }
   
   .menu {
-    background-color: rgb(161, 203, 206);
+    background-color: #b4bbd8;
     position: fixed;
     width: 100vw;
     top: 0;
+    z-index: 1;
    }
   
   .menu ul {
@@ -51,6 +52,13 @@ body {
   .menu a{
     display: block;
     padding: 10px 20px;/*so funciona com display block*/
+    transition: background-color 1.5s, color 2s; /*qual propriedade do menu quer mudar*/
+  }
+  
+
+  .menu a:hover {
+    background-color: rgb(245, 179, 239); 
+    color: black;
   }
   
   a {
@@ -61,6 +69,20 @@ body {
   
   a:hover {
     text-decoration: underline;
+   }
+
+   .titulo {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+
+    animation: linear 2s animacaoTitulo forwards;
+   }
+
+   @keyframes animacaoTitulo {
+    100% /*estado final animação*/ {
+      transform: scale(1) translateY(0vh);
+    opacity: 1;
+    }
    }
   
   .site-title {
@@ -78,14 +100,16 @@ body {
     font-family: 'Roboto', sans-serif;
   }
 
+  .contato h2,
   h2 {
     margin-bottom: 1em;
     font-size: xx-large;
 }
-
+  .contato,
   .portfolio {
     background: lightblue;
     padding: 2em;
+    min-height: 100vh;
   }
 
   .portfolio .grid {
@@ -115,5 +139,24 @@ body {
     height: 180px;
     width: 180px;
     border-radius: 50%;
+    transition: transform 1.5s;
+  }
+
+  .img-portfolio:hover {
+    transform: scale(1.2);
   }
   
+  .contato .icons{
+    text-align: center;
+  }
+
+  .contato a {
+    color: black;
+    font-size: 4em;
+  }
+
+  .contato a:active,
+  .contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px plum;
+  }
