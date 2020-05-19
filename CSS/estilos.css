@@ -100,17 +100,63 @@ body {
     font-family: 'Roboto', sans-serif;
   }
 
+  .sobre h2,
   .contato h2,
   h2 {
     margin-bottom: 1em;
     font-size: xx-large;
 }
+  .sobre,
   .contato,
   .portfolio {
     background: lightblue;
     padding: 2em;
-    min-height: 100vh;
+    min-height: 55vh;
   }
+
+@media (min-width: 1200px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px
+  }
+}
+
+
+  .sobre p {
+    color: rgb(83, 75, 81);
+    text-indent: 2em; /*recuo do texto paragrafo*/
+    margin-bottom: 1.5em;
+    text-align: justify;
+  }
+
+  .sobre a {
+    text-decoration: underline;
+  }
+
+  .sobre a:hover {
+    color: black;
+  }
+
+  .sobre .avatar img {
+    border-radius: 50%;
+    float: right;
+  }
+
+
+  .sobre .avatar {
+    float: right; /*flutua ao redor do texto*/
+    margin-left: 2em;
+    border-radius: 50%;
+  }
+
+  @media (min-width: 375px) {
+    .sobre .avatar img {
+      float: right;
+      border-radius: 80%;
+      margin-left: 2em;
+    }
+  }  
 
   .portfolio .grid {
     display: grid;
@@ -139,19 +185,50 @@ body {
     height: 180px;
     width: 180px;
     border-radius: 50%;
+    transition: transform 1s;
+  }
+
+ /* .img-portfolio:hover {
+    transform: scale(1.2);
+  }*/
+
+  .flip-card {
+    perspective: 500px;
+  }
+
+  .card {
+    position: relative; 
+    transform-style: preserve-3d;
+    transition: transform 3s;
+  }
+
+  .flip-card:hover .card {
+    transform: rotateY(180deg);
     transition: transform 1.5s;
   }
 
-  .img-portfolio:hover {
-    transform: scale(1.2);
+  .card-front,
+  .card-back {
+    position: absolute;/*os elementos saem do fluxo normal"voando"*/
+    text-align: center;
+    text-justify: auto;
+    backface-visibility: hidden;
   }
-  
+
+  .card-back {
+    background-color: #b4bbd8;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    transform: rotateY(180deg);
+  }
+
   .contato .icons{
     text-align: center;
   }
 
   .contato a {
-    color: black;
+    color: rgb(65, 62, 62);
     font-size: 4em;
   }
 

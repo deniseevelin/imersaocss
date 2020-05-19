@@ -18,7 +18,7 @@
 <body>
   <header>
     <nav class="menu">
-      <ul>
+      <ul class="container">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#portfolio">Projetos</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -29,21 +29,71 @@
       <h2 class="site-subtitle">jr. frontend developer</h2>
     </div>
   </header>
+  <section class="sobre" id="sobre">
+    <h2>Sobre</h2>
+    <figure class="avatar">
+      <img src="https://pbs.twimg.com/profile_images/1262177609846226944/9cxmukvT_400x400.jpg" alt="Denise Duarte">
+    </figure>
+
+    <p>
+      Me chamo Denise Evelin, sou Analista de Qualidade e graduanda em Engenharia de Produção.
+      Sempre tive muita curiosidade em criar um aplicativo para celular ou criar um site, isso pensando em atender minhas demandas/necssidades de forma mais eficiente,
+      então comecei a pesquisar como era construído tudo isso e me deparei com esse universo da programação.
+      Então, no ano de 2019 descobri um novo hobby pela área de Tecnologia da Informação, mais especificamente pelo Desenvolvimento Web.
+      Minha primeira linguagem em que tive contato foi o JavaScript, onde através de pesquisas descobri que é uma linguagem muito
+      flexível e com ferramentas muito úteis. 
+    </p>
+
+    <p>
+      Desde então, venho descobrindo o quão desafiador é esse universo Dev, e minhas curiosidades e expectativas aumentam a cada descoberta.
+      
+    </p>
+
+    <p>
+      Uma grande oportunidade foi a construção desse site durante a <a href: "https://www.alura.com.br/imersao-css"> Imersão CSS da Alura. </a>Numa proxima chance, não deixem de participar!😄
+    </p>
+  </section>
   <section class="portfolio" id="portfolio">
     <h2>Projetos</h2>
     <div class="grid">
-      <figure>
-        <img class="img-portfolio" src="./img/female-developer-vector.jpg" alt="Developer">
-        <figcaption>Developer</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/front.png" alt=">Frontend">
-        <figcaption>Frontend</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/mobile_ui_ux_phone_interface_developer_frontend-512.png" alt="UXDesign">
-        <figcaption>UXDesign</figcaption>
-      </figure>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/female-developer-vector.jpg" alt="Developer">
+            <figcaption>Developer</figcaption>
+          </figure>
+          <div class="card-back">
+            Web Developer!
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/front.png" alt=">Frontend">
+            <figcaption>Frontend</figcaption>
+          </figure>
+          <div class="card-back">
+            Frontend!
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/mobile_ui_ux_phone_interface_developer_frontend-512.png"
+              alt="UXDesign">
+            <figcaption>UXDesign</figcaption>
+          </figure>
+          <div class="card-back">
+            UX Design!
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
   <section class="contato" id="contato">
